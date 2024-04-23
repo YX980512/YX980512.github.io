@@ -1,4 +1,4 @@
-# Quick Start with Fastai for Various Applications
+# Fastai for Various Applications
 
 Fastai simplifies machine learning applications by unifying the workflow across different domains such as computer vision, natural language processing, tabular data analysis, and recommendation systems. Here is a record of my learning.
 
@@ -44,7 +44,7 @@ learn = unet_learner(dls, resnet50)
 learn.fine_tune(12)
 ```
 
-![](/images/seg1.jpg "d")
+![](/images/seg1.jpg "Results")
 
 Or we can plot the k instances that contributed the most to the validation loss by using the SegmentationInterpretation class.
 
@@ -53,5 +53,5 @@ interp = SegmentationInterpretation.from_learner(learn)
 interp.plot_top_losses(k=4)
 ```
 
-![](/images/seg2.jpg "")
+![](/images/seg2.jpg "Show")
 
