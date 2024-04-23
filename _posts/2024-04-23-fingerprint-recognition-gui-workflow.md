@@ -43,7 +43,7 @@ Docker is a fantastic tool that encapsulates applications in portable containers
 
 The process began straightforwardly, using a `Dockerfile` to create an image that would serve as an environment for a machine learning application. However, during the build process, an error occurred while installing `scipy`, a dependency that was critical for the project. Here's a glimpse into the hiccup:
 
-![](/images/docker_succ.jpg "Docker Build Error")
+![](/images/docker_error.png "Docker Build Error")
 
 After scouring the build logs, it was evident that the error emerged during the `pip install` step, where `scipy` was being installed. My initial guess, after consulting with the almighty Google, pointed towards a version conflict issue.
 
@@ -56,6 +56,8 @@ The most plausible cause seemed to be an underlying incompatibility between `sci
 To circumvent the conflict, I made a strategic decision to modify the `Dockerfile`. I temporarily commented out `fastai` and other related packages from `requirements.txt`, ensuring a smooth creation of the Docker image. 
 
 With this adjustment, the Docker image was successfully built:
+
+![](/images/docker_succ.jpg "Docker Build Success")
 
 
 Once the image was up and running, I entered the container and manually installed the fastai package. Voila! The installation proceeded without a hitch.
