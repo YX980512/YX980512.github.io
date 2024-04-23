@@ -1,6 +1,6 @@
 # Quick Start with Fastai for Various Applications
 
-Fastai simplifies machine learning applications by unifying the workflow across different domains such as computer vision, natural language processing, tabular data analysis, and recommendation systems. Here, we provide a concise guide on using fastai for diverse applications, highlighting the commonalities in workflow regardless of the dataset or model complexity.
+Fastai simplifies machine learning applications by unifying the workflow across different domains such as computer vision, natural language processing, tabular data analysis, and recommendation systems. Here is a record of my learning.
 
 ## Common Workflow in Fastai
 
@@ -27,3 +27,29 @@ dls = ImageDataLoaders.from_name_func(
     label_func=is_cat, item_tfms=Resize(224))
 learn = vision_learner(dls, resnet34, metrics=error_rate)
 learn.fine_tune(1)
+
+### Computer Vision Segmentation
+
+- **Dataset**: Subset of the Camvid dataset.
+- **Model**: Training a segmentation model using unet_learner.
+
+```python
+from fastai.vision.all import *
+path = untar_data(URLs.CAMVID_TINY)
+dls = SegmentationDataLoaders.from_label_func(
+    path, bs=8, fnames=get_image_files(path/"images"),
+    label_func=lambda o: path/'labels'/f'{o.stem}_P{o.suffix}',
+    codes=np.loadtxt(path/'codes.txt', dtype=str))
+learn = unet_learner(dls, resnet50)
+learn.fine_tune(12)
+
+![](/images/seg1.jpg "")
+
+Or we can plot the k instances that contributed the most to the validation loss by using the SegmentationInterpretation class.
+
+```python
+interp = SegmentationInterpretation.from_learner(learn)
+interp.plot_top_losses(k=4)
+
+![](/images/seg2.jpg "")
+
