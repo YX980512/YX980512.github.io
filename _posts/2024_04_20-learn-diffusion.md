@@ -18,7 +18,7 @@ The Diffusion Model is a type of generative model, which, unlike other generativ
 
 ## Initial Condition and Prediction
 
-![](/images/diffusion.jpg "diffusion")
+![](/images/diffusion.png "diffusion")
 
 - Initial state of the system $x_0$
 - Discretized time step $t$
