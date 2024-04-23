@@ -33,7 +33,7 @@ Each enrolled fingerprint, along with the user's name, was stored in an SQLite d
 
 ## Interface Display
 
-![](/images/zw.png GUI display")
+![](/images/zw.png "GUI diaplay")
 
 
 
