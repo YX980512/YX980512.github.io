@@ -42,14 +42,16 @@ dls = SegmentationDataLoaders.from_label_func(
     codes=np.loadtxt(path/'codes.txt', dtype=str))
 learn = unet_learner(dls, resnet50)
 learn.fine_tune(12)
+```
 
-![](/images/seg1.jpg "")
+![](/images/seg1.jpg "d")
 
 Or we can plot the k instances that contributed the most to the validation loss by using the SegmentationInterpretation class.
 
 ```python
 interp = SegmentationInterpretation.from_learner(learn)
 interp.plot_top_losses(k=4)
+```
 
 ![](/images/seg2.jpg "")
 
