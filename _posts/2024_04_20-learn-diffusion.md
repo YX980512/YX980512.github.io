@@ -9,7 +9,7 @@ Here's the table of contents:
 
 ## Initial Condition and Prediction
 
-- Initial state of the system `\(x_0\)`
+- Initial state of the system $x_0$
 - Discretized time step `\(t\)`
 - The disturbance `\( \epsilon_t \sim \mathcal{N}(0, I) \)`
 - The prediction error `\( \epsilon_0 \)`
