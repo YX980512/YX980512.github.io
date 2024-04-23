@@ -41,15 +41,15 @@ Docker is a fantastic tool that encapsulates applications in portable containers
 
 ## The Dockerfile Debacle
 
-The process began straightforwardly, using a `Dockerfile` to create an image that would serve as an environment for a machine learning application. However, during the build process, an error occurred while installing `scipy`, a dependency that was critical for the project. Here's a glimpse into the hiccup:
+The process began straightforwardly, using a `Dockerfile` to create an image that would serve as an environment for a machine learning application. However, during the build process, an error occurred while installing `spacy`, a dependency that was critical for the project. Here's a glimpse into the hiccup:
 
 ![](/images/docker_error.png "Docker Build Error")
 
-After scouring the build logs, it was evident that the error emerged during the `pip install` step, where `scipy` was being installed. My initial guess, after consulting with the almighty Google, pointed towards a version conflict issue.
+After scouring the build logs, it was evident that the error emerged during the `pip install` step, where `spacy` was being installed. My initial guess, after consulting with the almighty Google, pointed towards a version conflict issue.
 
 ## Triaging the Trouble
 
-The most plausible cause seemed to be an underlying incompatibility between `scipy` and other packages, possibly `fastai`, which was also in the `requirements.txt` file used during the build. The conundrum of conflicting versions is not uncommon in the Python ecosystem, where one package's new release may inadvertently break another's functionality.
+The most plausible cause seemed to be an underlying incompatibility between `spacy` and other packages. The conundrum of conflicting versions is not uncommon in the Python ecosystem, where one package's new release may inadvertently break another's functionality.
 
 ## Crafting a Solution
 
