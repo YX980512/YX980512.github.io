@@ -21,9 +21,7 @@ Here's the table of contents:
 - For $T, ..., 1$ do reverse time steps:
   - For $t = 1$ set $z = 0$; for $t > 1$, sample $z_t$ from $\mathcal{N}(0, I)$
   - Update $x_{t-1}$ from $x_t$ using the reparameterization trick from equation (12), where:
-    $
-    \mu_\theta(x_t, t) = \frac{1}{\sqrt{\alpha_t}} \left( x_t - \frac{1-\alpha_t}{\sqrt{1-\alpha_t}} \epsilon_\theta(x_t, t) \right)
-    $
+    $\mu_\theta(x_t, t) = \frac{1}{\sqrt{\alpha_t}} \left( x_t - \frac{1-\alpha_t}{\sqrt{1-\alpha_t}} \epsilon_\theta(x_t, t) \right)$
     and $\theta$ represents the learned parameters.
   - Update the standard deviation as $\sigma_t = \sqrt{\beta_t} = \sqrt{\frac{1-\alpha_t}{1-\bar{\alpha}_t} \beta_t}$
   - The new state is sampled as $x_{t-1} = \mu_\theta(x_t, t) + \sigma_t z$
