@@ -27,7 +27,7 @@ dls = ImageDataLoaders.from_name_func(
     label_func=is_cat, item_tfms=Resize(224))
 learn = vision_learner(dls, resnet34, metrics=error_rate)
 learn.fine_tune(1)
-'''
+```
 
 ### Computer Vision Segmentation
 
