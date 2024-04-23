@@ -31,33 +31,11 @@ An essential feature was to provide real-time feedback during the fingerprint en
 
 Each enrolled fingerprint, along with the user's name, was stored in an SQLite database. Managing data efficiently was crucial, ensuring fast retrieval and no duplication of fingerprints.
 
-## Troubleshooting and Challenges
+## Interface Display
 
-### Biometric Processing
+![](/images/zw.png GUI display")
 
-One of the significant challenges was ensuring that the `FingerprintProcessor` provided accurate and consistent results. Fine-tuning the algorithm for similarity scoring and establishing a reliable threshold for matching fingerprints required extensive testing.
 
-### User Interface Responsiveness
-
-Ensuring the GUI remained responsive during long-running operations, like comparing fingerprints against a large database, was solved by implementing threading and queue management.
-
-### Error Handling
-
-Robust error handling was implemented to guide the user through resolving issues, such as incorrect file formats or incomplete data entry, enhancing the overall user experience.
-
-## Lessons Learned
-
-This project taught me the importance of user feedback in real-time systems, the intricacies of integrating biometric algorithms with front-end applications, and the need for robust error handling to create a seamless user experience.
-
-## Future Improvements
-
-Moving forward, I plan to implement additional features such as:
-
-- An advanced matching algorithm that further reduces false positives.
-- A more sophisticated database schema that supports larger datasets.
-- Enhanced security features to protect sensitive biometric data.
-
-The journey of creating a fingerprint recognition GUI was both challenging and rewarding. It highlighted the delicate balance between backend processing and frontend design, underscoring the importance of each in the creation of a functional and user-friendly application.
 
 ## Basic formatting
 
