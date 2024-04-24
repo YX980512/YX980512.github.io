@@ -1,6 +1,6 @@
 # This is a record of thought and reflection
 
-Here's the table of contents:
+
 
 
 
