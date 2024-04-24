@@ -4,7 +4,7 @@
 
 
 
-# Fingerprint Recognition GUI Development
+## Fingerprint Recognition GUI Development
 
 Developing a graphical user interface (GUI) for fingerprint recognition involves a blend of software development, user experience design, and the integration of biometric processing algorithms. This post outlines the workflow and some challenges encountered while creating a fingerprint recognition GUI.
 
