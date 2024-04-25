@@ -1,12 +1,5 @@
 # Diffusion Model Learning Notes
 
-Here's the table of contents:
-
-1. TOC
-{:toc}
-
-# Diffusion Model Learning Notes
-
 ## Fundamentals of diffusion models
 The Diffusion Model is a type of generative model, which, unlike other generative networks such as VAEs (Variational Autoencoders) and GANs (Generative Adversarial Networks), gradually applies noise to an image in the forward phase until the image is degraded into pure Gaussian noise. Then, in the reverse phase, it learns the process of restoring the Gaussian noise back to the original image.
 
