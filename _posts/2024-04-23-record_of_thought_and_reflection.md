@@ -1,4 +1,4 @@
-# This is a record of thought and reflection
+# Record of thought and reflection
 
 
 
